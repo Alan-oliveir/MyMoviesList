@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de filmes para assistir</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./modal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-</head>
-<body>
-    <header>
-        <h2><i class="bi bi-film"></i>MyMovies</h2>
-        <section id="search-container">
-            <div class="input-wrapper movie-name-wrapper">
-                <label for="movie-name">Nome:</label>
-                <input type="text" id="movie-name">
-            </div>
-            <div class="input-wrapper movie-year-wrapper">
-                <label for="movie-year">Ano:</label>
-                <input type="text" id="movie-year">
-            </div>
-            <button id="search-button"><i class="bi bi-search"></i></button>
-        </section>
-    </header>
-    <main>
-        <h2>Comece agora a sua lista de filmes!</h2>
-        <section id="movie-list"></section>
-        <article id="modal-overlay">
-            <section id="modal-background"></section>
-            <section id="modal-container"></section>
-                <h2>Título do Filme</h2>
-        </article>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de filmes para assistir</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./modal.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <header>
+            <h2><i class="bi bi-film"></i>MyMovies</h2>
+            <section id="search-container">
+                <div class="input-wrapper movie-name-wrapper">
+                    <label for="movie-name">Nome:</label>
+                    <input type="text" id="movie-name">
+                </div>
+                <div class="input-wrapper movie-year-wrapper">
+                    <label for="movie-year">Ano:</label>
+                    <input type="text" id="movie-year">
+                </div>
+                <button id="search-button"><i class="bi bi-search"></i></button>
+            </section>
+        </header>
+        <main>
+            <h2>Comece agora a sua lista de filmes!</h2>
+            <section id="movie-list"></section>
+            <article id="modal-overlay">
+                <section id="modal-background"></section>
+                <section id="modal-container">
+                    <h2 id="movie-title">The Godfather - 1972</h2>
+                    <section id="modal-body">
+                        <img 
+                            id="movie-poster"
+                            src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" 
+                            alt="Poster do filme."
+                        />
+                        <div id="movie-info">
+                            <h3 id="movie-plot">
+                                The aging patriarch of an organized crime dynasty in postwar New
+                                York City transfers control of his clandestine empire to his
+                                reluctant youngest son.
+                            </h3>
+                            <div id="movie-cast">
+                                <h4>Elenco:</h4>
+                                <h5>Marlon Brando, Al Pacino, James Caan</h5>
+                            </div>
+                            <div id="movie-genre">
+                                <h4>Gênero:</h4>
+                                <h5>Crime, Drama</h5>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="modal-footer">
+                        <button id="add-to-list">Adicionar à Lista</button>
+                    </section>
+                </section>
+            </article>
+        </main>
+    </body>
 </html>
