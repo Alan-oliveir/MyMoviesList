@@ -13,6 +13,12 @@
     font-family: sans-serif;    
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -26,6 +32,7 @@ header {
     display: flex;
     align-items: center;
     width: 50%;
+    justify-content: flex-end;
 }
 
 header > h2 > i {
@@ -39,7 +46,7 @@ header > h2 > i {
 }
 
 .movie-year-wrapper {
-    width: 30%;
+   /* width: 30%; */
     display: flex;
     align-items: center;
 }
@@ -79,4 +86,11 @@ header > h2 > i {
 #search-button:focus,
 #search-button:hover {
     background-color: var(--light-primary);
+}
+
+main {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--ligthest-color) ;
+    flex-grow: 1;
 }
