@@ -17,6 +17,14 @@
     align-items: center;
 }
 
+.overlay {
+    visibility: hidden;
+} 
+
+.open {
+    visibility: visible;
+}
+
 #modal-background {
     background-color: var(--light-primary);
     width: 100%;
