@@ -19,10 +19,13 @@
 
 .overlay {
     visibility: hidden;
+    transition: all 0.3 ease;
+    opacity: 0;
 } 
 
 .open {
     visibility: visible;
+    opacity: 1;
 }
 
 #modal-background {
