@@ -29,7 +29,9 @@ function createModal(data) {
             </div>
           </section>
           <section id="modal-footer">
-            <button id="add-to-list" onclick='{addToList}'>Adicionar à Lista</button>
+            <button id="add-to-list" onclick='{addToList(${JSON.stringify(
+              data
+            ).replace("'", "`")})}'>Adicionar à Lista</button>
           </section>`;
 }
 

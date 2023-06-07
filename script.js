@@ -8,7 +8,7 @@ let movieList = [];
 
 async function searchButtonClickHandler() {
   try {
-    let url = `http://www.omdbapi.com/?apikey=${key}&t=${movieNameParameterGenerator()}&y=${movieYearParameterGenerator}`;
+    let url = `http://www.omdbapi.com/?apikey=${key}&t=${movieNameParameterGenerator()}${movieYearParameterGenerator()}`;
     const response = await fetch(url);
     const data = await response.json();
     console.log("data: ", data);
@@ -33,7 +33,7 @@ function movieYearParameterGenerator() {
   if (movieYear.value === "") {
     return "";
   }
-  if (movieYear.value.lenght !== 4 || Number.isNaN(Number(movieYear.value))) {
+  if (movieYear.value.length !== 4 || Number.isNaN(Number(movieYear.value))) {
     throw new Error("Ano do filme inválido.");
   }
   return `&y=${movieYear.value}`;
