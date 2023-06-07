@@ -2,6 +2,9 @@ const searchButton = document.getElementById("search-button");
 const overlay = document.getElementById("modal-overlay");
 const movieName = document.getElementById("movie-name");
 const movieYear = document.getElementById("movie-year");
+const movieListContainer = document.getElementById("movie-list");
+
+let movieList = [];
 
 async function searchButtonClickHandler() {
   try {
@@ -34,6 +37,24 @@ function movieYearParameterGenerator() {
     throw new Error("Ano do filme inválido.");
   }
   return `&y=${movieYear.value}`;
+}
+
+function addToList(data) {
+  movieList.push(data);
+  updateUI(data);
+  overlay.classList.remove("open");
+}
+
+function updateUI(data) {
+  movieListContainer.innerHTML += `<article>
+  <img
+    src="${data.Poster}"
+    alt="Poster do ${data.Title}."
+  />
+  <button class="remove-button">
+    <i class="bi bi-trash"></i> Remover
+  </button>
+</article>`;
 }
 
 searchButton.addEventListener("click", searchButtonClickHandler);

@@ -96,3 +96,37 @@ main {
     color: var(--primary-color);
     flex-grow: 1;
 }
+
+#movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+#movie-list article {
+    display: flex;
+    flex-direction: column;
+}
+
+#movie-list article > img {
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.remove-button {
+    border: 3px solid var(--secundary-color);
+    padding: 0.3rem 0;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 1px 1px 10px #000;
+    color: var(--secundary-color);
+}
+
+.remove-button:focus,
+.remove-button:hover {
+    background-color: var(--light-secundary);
+    color: var(--ligthest-color);
+}
