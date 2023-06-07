@@ -4,7 +4,7 @@ const movieName = document.getElementById("movie-name");
 const movieYear = document.getElementById("movie-year");
 const movieListContainer = document.getElementById("movie-list");
 
-let movieList = [];
+let movieList = JSON.parse(localStorage.getItem("movieList")) ?? [];
 
 async function searchButtonClickHandler() {
   try {
@@ -45,6 +45,7 @@ function addToList(data) {
     return;
   }
   movieList.push(data);
+  updateLocalStorage();
   updateUI(data);
   overlay.classList.remove("open");
 }
@@ -71,6 +72,13 @@ function isFilmAlreadOnList(imdbID) {
 function removeFilmFromList(imdbID) {
   movieList = movieList.filter((movie) => movie.imdbID !== imdbID);
   document.getElementById(`movie-card-${imdbID}`).remove();
+  updateLocalStorage();
 }
+
+function updateLocalStorage() {
+  localStorage.setItem("movieList", JSON.stringify(movieList));
+}
+
+movieList.forEach(updateUI);
 
 searchButton.addEventListener("click", searchButtonClickHandler);
