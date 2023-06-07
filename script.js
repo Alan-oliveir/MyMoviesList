@@ -9,27 +9,31 @@ async function searchButtonClickHandler() {
     const response = await fetch(url);
     const data = await response.json();
     console.log("data: ", data);
+    if (data.Error) {
+      throw new Error("Filme não encontrado");
+    }
+    createModal(data);
     overlay.classList.add("open");
   } catch (error) {
-    console.error(error.message);
+    notie.alert({ type: "error", text: error.message });
   }
+}
 
-  function movieNameParameterGenerator() {
-    if (movieName.value === "") {
-      throw new Error("O nome do filme deve ser informado");
-    }
-    return movieName.value.split(" ").join("+");
+function movieNameParameterGenerator() {
+  if (movieName.value === "") {
+    throw new Error("O nome do filme deve ser informado");
   }
+  return movieName.value.split(" ").join("+");
+}
 
-  function movieYearParameterGenerator() {
-    if (movieYear.value === "") {
-      return "";
-    }
-    if (movieYear.value.lenght !== 4 || Number.isNaN(Number(movieYear.value))) {
-      throw new Error("Ano do filme inválido.");
-    }
-    return `&y=${movieYear.value}`;
+function movieYearParameterGenerator() {
+  if (movieYear.value === "") {
+    return "";
   }
+  if (movieYear.value.lenght !== 4 || Number.isNaN(Number(movieYear.value))) {
+    throw new Error("Ano do filme inválido.");
+  }
+  return `&y=${movieYear.value}`;
 }
 
 searchButton.addEventListener("click", searchButtonClickHandler);
