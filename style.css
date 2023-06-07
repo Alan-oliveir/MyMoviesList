@@ -78,7 +78,7 @@ header > h2 > i {
 }
 
 #search-button {
-    width: 5%;
+    width: 18px;
     padding: 0.3rem;
     border: 2px solid var(--ligthest-color);
     border-radius: 10px;
@@ -108,6 +108,7 @@ main {
 #movie-list article {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 #movie-list article > img {
