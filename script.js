@@ -61,7 +61,7 @@ function updateUI(data) {
 </article>`;
 }
 
-function isFilmAlreadOnList() {
+function isFilmAlreadOnList(imdbID) {
   function isThisIdFromThisMovie(movie) {
     return movie.imdbID === imdbID;
   }
