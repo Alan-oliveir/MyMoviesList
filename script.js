@@ -69,8 +69,6 @@ function isFilmAlreadOnList(imdbID) {
   return movieList.find(isThisIdFromThisMovie);
 }
 
-// Teste
-
 function removeFilmFromList(imdbID) {
   movieList = movieList.filter((movie) => movie.imdbID !== imdbID);
   document.getElementById(`movie-card-${imdbID}`).remove();
