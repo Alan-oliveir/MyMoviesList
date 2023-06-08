@@ -18,9 +18,6 @@
 - Bootstrap Icons
 - Notie
 
-## Site
-[My Movies List]
-
 ---
 ## Agradecimentos
 - Hashtag Programação: Curso JavaScript Impressionador.
