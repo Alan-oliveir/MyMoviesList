@@ -3,7 +3,7 @@
 ---
 
 ## Layout 
-[My Movies List](https://github.com/Alan-oliveir/MyMoviesList/blob/main/images/screenshot.png)
+![My Movies List](https://github.com/Alan-oliveir/MyMoviesList/blob/main/images/screenshot.png)
 
 ## Tecnologias utilizadas
 - JavaScript
