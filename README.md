@@ -3,7 +3,7 @@
 ---
 
 ## Layout 
-[My Movies List]
+[My Movies List](https://github.com/Alan-oliveir/MyMoviesList/blob/main/images/screenshot.png)
 
 ## Tecnologias utilizadas
 - JavaScript
@@ -26,6 +26,5 @@
 - Hashtag Programação: Curso JavaScript Impressionador.
 
 ---
-## Redes Sociais 
-
+## Redes Sociais
 Alan de Oliveira Gonçalves - Linkedin: www.linkedin.com/in/alan-de-oliveira-gonçalves-207549258
